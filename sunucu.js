@@ -64,6 +64,18 @@ const sunucu = http.createServer((req, res) => {
         return gonder(res, 200, 'application/json', JSON.stringify(veri));
     }
 
+    if (yol === '/api/agep') {
+        const sonTeslim = dayjs('2026-11-01');
+        const bugun = dayjs().startOf('day');
+        const veri = {
+            etkinlik: 'AGEP son teslim',
+            sonTeslim: sonTeslim.format('DD.MM.YYYY'),
+            bugun: bugun.format('DD.MM.YYYY'),
+            kalanGun: sonTeslim.diff(bugun, 'day'),
+        };
+        return gonder(res, 200, 'application/json', JSON.stringify(veri));
+    }
+
     // Diğer tüm yollar -> 404
     gonder(res, 404, 'text/plain', 'Sayfa bulunamadı');
 });
