@@ -37,6 +37,23 @@ const sunucu = http.createServer((req, res) => {
         return gonder(res, 200, 'text/html', html);
     }
 
+    if (yol === '/hakkimda') {
+        const html = `<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Hakkımda</title>
+</head>
+<body>
+<h1>Hakkımda</h1>
+<p>Ben Azra Çetinalp , Yozgat Bozok Üniversitesi Bilgisayar Mühendisliği öğrencisiyim.</p>
+<p>Web programlama dersinde Node.js ile HTTP sunucusu yazmayı öğreniyorum.</p>
+<p><a href="/">Ana sayfa</a></p>
+</body>
+</html>`;
+        return gonder(res, 200, 'text/html', html);
+    }
+
     // Diğer tüm yollar -> 404
     gonder(res, 404, 'text/plain', 'Sayfa bulunamadı');
 });
