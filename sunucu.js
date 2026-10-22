@@ -46,7 +46,7 @@ const sunucu = http.createServer((req, res) => {
 </head>
 <body>
 <h1>Hakkımda</h1>
-<p>Ben Azra Çetinalp , Yozgat Bozok Üniversitesi Bilgisayar Mühendisliği öğrencisiyim.</p>
+<p>Ben Azra Çetinalp, Yozgat Bozok Üniversitesi Bilgisayar Mühendisliği öğrencisiyim.</p>
 <p>Web programlama dersinde Node.js ile HTTP sunucusu yazmayı öğreniyorum.</p>
 <p><a href="/">Ana sayfa</a></p>
 </body>
