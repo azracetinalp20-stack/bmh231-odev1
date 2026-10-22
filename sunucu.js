@@ -54,6 +54,16 @@ const sunucu = http.createServer((req, res) => {
         return gonder(res, 200, 'text/html', html);
     }
 
+
+    if (yol === '/api/ders') {
+        const veri = {
+            kod: 'BMH231',
+            ad: 'Web Programlama',
+            gun: 'Perşembe',
+        };
+        return gonder(res, 200, 'application/json', JSON.stringify(veri));
+    }
+
     // Diğer tüm yollar -> 404
     gonder(res, 404, 'text/plain', 'Sayfa bulunamadı');
 });
