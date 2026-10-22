@@ -30,7 +30,7 @@ const sunucu = http.createServer((req, res) => {
 <title>BMH231 Ödev 1</title>
 </head>
 <body>
-<h1>BMH231 Web Programlama</h1>
+<h1>Hoş Geldiniz: BMH231</h1>
 <p><a href="/hakkimda">Hakkımda</a></p>
 </body>
 </html>`;
